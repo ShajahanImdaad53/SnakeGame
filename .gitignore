@@ -5,4 +5,5 @@ __pycache__/
 dist/
 build/
 *.spec
+!Snake.spec
 high_score.txt
