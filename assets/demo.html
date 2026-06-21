@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Snake Game — Demo</title>
+  <style>
+    body { font-family: system-ui, -apple-system,Segoe UI, Roboto, "Helvetica Neue", Arial; display:flex;flex-direction:column;align-items:center;gap:16px;padding:24px }
+    #playBtn { background:#15aabf;color:#fff;border:none;padding:12px 18px;border-radius:8px;font-size:16px;cursor:pointer }
+    video{ max-width:100%; border:1px solid #ddd; border-radius:8px }
+    .note{color:#666;font-size:14px}
+  </style>
+</head>
+<body>
+  <h1>Snake Game — Demo</h1>
+  <p class="note">Place a demo video file named <strong>demo.mp4</strong> in this same directory (assets/demo.mp4). If you don't have one yet, record a short clip or export a GIF and name it accordingly.</p>
+  <button id="playBtn">Play Demo</button>
+  <video id="demo" controls>
+    <source src="demo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    const btn = document.getElementById('playBtn');
+    const v = document.getElementById('demo');
+    btn.addEventListener('click', () => {
+      if (v.paused) v.play(); else v.pause();
+      btn.textContent = v.paused ? 'Play Demo' : 'Pause Demo';
+    });
+    v.addEventListener('ended', () => btn.textContent = 'Play Demo');
+  </script>
+</body>
+</html>

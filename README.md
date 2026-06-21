@@ -14,6 +14,13 @@ If you have a GIF or a short clip, add it to the repo as `assets/demo.gif` and i
 
 ![Gameplay demo](assets/demo.gif)
 
+Play demo
+---------
+
+Click the demo page to open a local demo player. (GitHub will not execute scripts inside repository HTML — open the file in your browser locally.)
+
+[Open demo player](assets/demo.html)
+
 Highlights
 ----------
 
